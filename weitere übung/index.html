@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benutzerinformationen</title>
+</head>
+<body>
+    <div id="user-container"></div>
+
+    <script>
+        const users = [
+            {
+                name: 'Man',
+                firstName: 'Spider',
+                age: 86
+            },
+            {
+                name: 'Man',
+                firstName: 'Iron',
+                age: 54
+            },
+        ];
+
+        // Container, in dem die Benutzerinformationen angezeigt werden sollen
+        const userContainer = document.getElementById('user-container');
+
+        // Schleife über das users-Array
+        users.forEach(user => {
+            // Erstellen eines neuen div-Elements für jeden Benutzer
+            const userDiv = document.createElement('div');
+
+            // Benutzerinformationen als Textinhalt des div-Elements hinzufügen
+            userDiv.innerHTML = `
+                <h2>${user.firstName} ${user.name}</h2>
+                <p>Alter: ${user.age}</p>
+            `;
+
+            // Das div-Element zum userContainer hinzufügen
+            userContainer.appendChild(userDiv);
+        });
+    </script>
+</body>
+</html>
