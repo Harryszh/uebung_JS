@@ -74,5 +74,27 @@ greetUserBy("John", "Good morning");
 
 //Übung 6 (Unbestimmte Anzahl Parameter)
 
+//function sum
+function sum (...numbers){
+    const total = numbers.reduce((accumulator, current) => accumulator + current, 0);
+    
+    console.log("Die Summe der übergebenen Zahl ist:" + total);
+
+}
+
+sum(1, 2, 3);
+sum(10, 20, 30, 40);
+sum(-5, 15, 25);
+sum()
+
+
+//function createSentence
+
+function createSentence() {
+    
+}
+
+
+
 
 
